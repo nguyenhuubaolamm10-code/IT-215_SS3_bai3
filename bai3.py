@@ -50,7 +50,6 @@ books = [
 ]
 
 
-# 1. Thống kê số lượng sách
 @app.get("/books/statistics")
 def get_statistics():
     available = 0
@@ -69,7 +68,6 @@ def get_statistics():
     }
 
 
-# 2. Lấy danh sách thể loại
 @app.get("/books/categories")
 def get_categories():
     categories = []
@@ -83,7 +81,6 @@ def get_categories():
     }
 
 
-# 3. Lấy sách mới nhất
 @app.get("/books/latest")
 def get_latest():
     if len(books) == 0:
